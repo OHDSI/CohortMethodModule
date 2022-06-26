@@ -14,7 +14,7 @@ createCohortMethodModuleSpecifications <- function(cmAnalysisList,
   specifications <- list(module = "CohortMethodModule",
                          version = "0.0.1",
                          remoteRepo = "github.com",
-                         remoteUsername = "ohdsi",
+                         remoteUsername = "anthonysena",
                          settings = analysis)
   class(specifications) <- c("CohortMethodModuleSpecifications", "ModuleSpecifications")
   return(specifications)

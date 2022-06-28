@@ -44,7 +44,7 @@ rCode[grep("return\\(analysis\\)", rCode)]  <- sprintf("
   specifications <- list(module = \"%s\",
                          version = \"%s\",
                          remoteRepo = \"github.com\",
-                         remoteUsername = \"ohdsi\",
+                         remoteUsername = \"anthonysena\",
                          settings = analysis)
   class(specifications) <- c(\"CohortMethodModuleSpecifications\", \"ModuleSpecifications\")
   return(specifications)", moduleInfo$Name, moduleInfo$Version)

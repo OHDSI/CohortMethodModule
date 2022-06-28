@@ -420,12 +420,8 @@
 		"DatabaseConnector" : {
 			"Package" : "DatabaseConnector",
 			"Version" : "5.0.4",
-			"Source" : "GitHub",
-			"RemoteType" : "github",
-			"RemoteHost" : "api.github.com",
-			"RemoteRepo" : "DatabaseConnector",
-			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "develop"
+			"Source" : "Repository",
+			"Repository" : "CRAN"
 		},
 		"ggplot2" : {
 			"Package" : "ggplot2",

@@ -57,5 +57,6 @@ OhdsiRTools::createRenvLockFile(rootPackage = "CohortMethod",
                                 mode = "description",
                                 additionalRequiredPackages = c("checkmate", 
                                                                "testthat",
-                                                               "Eunomia"))
+                                                               "Eunomia",
+                                                               "CohortGenerator"))
 renv::init()

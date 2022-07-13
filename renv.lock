@@ -419,7 +419,7 @@
 		},
 		"DatabaseConnector" : {
 			"Package" : "DatabaseConnector",
-			"Version" : "5.0.3",
+			"Version" : "5.0.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -590,6 +590,16 @@
 			"RemoteRepo" : "Eunomia",
 			"RemoteUsername" : "ohdsi",
 			"RemoteRef" : "v1.0.2"
+		},
+		"CohortGenerator" : {
+			"Package" : "CohortGenerator",
+			"Version" : "0.5.0",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "CohortGenerator",
+			"RemoteUsername" : "ohdsi",
+			"RemoteRef" : "v0.5.0"
 		}
 	}
 }

@@ -50,16 +50,13 @@ execute <- function(jobContext) {
   unlink(file.path(exportFolder, sprintf("Results_%s.zip", jobContext$moduleExecutionSettings$databaseId)))
 
   moduleInfo <- ParallelLogger::loadSettingsFromJson("MetaData.json")
-  resultsDataModel <- readr::read_csv(file = system.file("csv", "resultsDataModelSpecification.csv", package = "CohortMethod"),
-                                      show_col_types = FALSE) %>%
-    SqlRender::snakeCaseToCamelCaseNames()
+  resultsDataModel <- CohortGenerator::readCsv(file = system.file("csv", "resultsDataModelSpecification.csv", package = "CohortMethod"))
   resultsDataModel <- resultsDataModel[file.exists(file.path(exportFolder, paste0(resultsDataModel$tableName, ".csv"))), ]
   newTableNames <- paste0(moduleInfo$TablePrefix, resultsDataModel$tableName)
   file.rename(file.path(exportFolder, paste0(unique(resultsDataModel$tableName), ".csv")),
               file.path(exportFolder, paste0(unique(newTableNames), ".csv")))
   resultsDataModel$tableName <- newTableNames
   resultsDataModel <- SqlRender::camelCaseToSnakeCaseNames(resultsDataModel)
-  # TODO: use function in CohortGenerator once released:
-  readr::write_csv(resultsDataModel, file.path(exportFolder, "resultsDataModelSpecification.csv"))
+  CohortGenerator::writeCsv(resultsDataModel, file.path(exportFolder, "resultsDataModelSpecification.csv"))
 }
 

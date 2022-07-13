@@ -1,3 +1,8 @@
+CohortMethodModule 0.0.3
+========================
+
+- Update to use DatabaseConnector v5.0.4 and CohortGenerator v0.5.0
+
 CohortMethodModule 0.0.2
 ========================
 

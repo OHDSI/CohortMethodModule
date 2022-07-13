@@ -1,6 +1,6 @@
 {
 	"R" : {
-		"Version" : "4.2.0",
+		"Version" : "4.2.1",
 		"Repositories" : [
 			{
 				"Name" : "CRAN",
@@ -23,7 +23,7 @@
 		},
 		"rlang" : {
 			"Package" : "rlang",
-			"Version" : "1.0.2",
+			"Version" : "1.0.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -123,6 +123,12 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"backports" : {
+			"Package" : "backports",
+			"Version" : "1.4.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"bit64" : {
 			"Package" : "bit64",
 			"Version" : "4.0.5",
@@ -143,7 +149,7 @@
 		},
 		"generics" : {
 			"Package" : "generics",
-			"Version" : "0.1.2",
+			"Version" : "0.1.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -201,6 +207,12 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"checkmate" : {
+			"Package" : "checkmate",
+			"Version" : "2.1.0",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"clipr" : {
 			"Package" : "clipr",
 			"Version" : "0.8.0",
@@ -221,7 +233,7 @@
 		},
 		"farver" : {
 			"Package" : "farver",
-			"Version" : "2.1.0",
+			"Version" : "2.1.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -251,7 +263,7 @@
 		},
 		"nlme" : {
 			"Package" : "nlme",
-			"Version" : "3.1-157",
+			"Version" : "3.1-158",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -275,7 +287,7 @@
 		},
 		"stringi" : {
 			"Package" : "stringi",
-			"Version" : "1.7.6",
+			"Version" : "1.7.8",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -297,15 +309,9 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
-		"backports" : {
-			"Package" : "backports",
-			"Version" : "1.4.1",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
 		"dbplyr" : {
 			"Package" : "dbplyr",
-			"Version" : "2.2.0",
+			"Version" : "2.2.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -371,7 +377,7 @@
 		},
 		"SqlRender" : {
 			"Package" : "SqlRender",
-			"Version" : "1.9.0",
+			"Version" : "1.9.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -408,12 +414,6 @@
 		"BH" : {
 			"Package" : "BH",
 			"Version" : "1.78.0-0",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"checkmate" : {
-			"Package" : "checkmate",
-			"Version" : "2.1.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -455,13 +455,13 @@
 		},
 		"Cyclops" : {
 			"Package" : "Cyclops",
-			"Version" : "3.1.2",
+			"Version" : "3.2.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"EmpiricalCalibration" : {
 			"Package" : "EmpiricalCalibration",
-			"Version" : "3.0.0",
+			"Version" : "3.1.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -495,21 +495,21 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"fs" : {
+			"Package" : "fs",
+			"Version" : "1.5.2",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"processx" : {
 			"Package" : "processx",
-			"Version" : "3.6.1",
+			"Version" : "3.7.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"rematch2" : {
 			"Package" : "rematch2",
 			"Version" : "2.1.2",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"rstudioapi" : {
-			"Package" : "rstudioapi",
-			"Version" : "0.13",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -533,7 +533,7 @@
 		},
 		"pkgload" : {
 			"Package" : "pkgload",
-			"Version" : "1.2.4",
+			"Version" : "1.3.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -552,6 +552,18 @@
 		"testthat" : {
 			"Package" : "testthat",
 			"Version" : "3.1.4",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"lubridate" : {
+			"Package" : "lubridate",
+			"Version" : "1.8.0",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"RJSONIO" : {
+			"Package" : "RJSONIO",
+			"Version" : "1.3-1.6",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -579,7 +591,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortMethod",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "149ebd3840633c5c5cd837fa9912d7abbecbb697"
+			"RemoteRef" : "93b63e6b6840060dc2d5332113a3b05719529ccd"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",

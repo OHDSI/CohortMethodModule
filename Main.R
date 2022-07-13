@@ -52,11 +52,9 @@ execute <- function(jobContext) {
   moduleInfo <- ParallelLogger::loadSettingsFromJson("MetaData.json")
   resultsDataModel <- CohortGenerator::readCsv(file = system.file("csv", "resultsDataModelSpecification.csv", package = "CohortMethod"))
   resultsDataModel <- resultsDataModel[file.exists(file.path(exportFolder, paste0(resultsDataModel$tableName, ".csv"))), ]
-  newTableNames <- paste0(moduleInfo$TablePrefix, resultsDataModel$tableName)
-  file.rename(file.path(exportFolder, paste0(unique(resultsDataModel$tableName), ".csv")),
-              file.path(exportFolder, paste0(unique(newTableNames), ".csv")))
-  resultsDataModel$tableName <- newTableNames
-  resultsDataModel <- SqlRender::camelCaseToSnakeCaseNames(resultsDataModel)
+  if (any(!startsWith(resultsDataModel$tableName, moduleInfo$TablePrefix))) {
+    stop("Table names do not have required prefix")
+  }
   CohortGenerator::writeCsv(resultsDataModel, file.path(exportFolder, "resultsDataModelSpecification.csv"))
 }
 

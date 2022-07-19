@@ -591,7 +591,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortMethod",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "d615e3cf674ef8e457fb3b3da0a671795bc60b62"
+			"RemoteRef" : "5794ba02bd63221f073629d9cfbe09669da43bbd"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",

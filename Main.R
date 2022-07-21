@@ -55,6 +55,8 @@ execute <- function(jobContext) {
   if (any(!startsWith(resultsDataModel$tableName, moduleInfo$TablePrefix))) {
     stop("Table names do not have required prefix")
   }
-  CohortGenerator::writeCsv(resultsDataModel, file.path(exportFolder, "resultsDataModelSpecification.csv"))
+  CohortGenerator::writeCsv(x = resultsDataModel, 
+                            file = file.path(exportFolder, "resultsDataModelSpecification.csv"),
+                            warnOnFileNameCaseMismatch = FALSE)
 }
 

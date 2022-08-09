@@ -1,3 +1,8 @@
+CohortMethodModule 0.0.4
+========================
+
+- Updating CohortMethod to fix missing columns in cm_covariate table, and fixing error when requesting balance without covariate filtering.
+
 CohortMethodModule 0.0.3
 ========================
 

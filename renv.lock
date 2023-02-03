@@ -419,7 +419,7 @@
 		},
 		"DatabaseConnector" : {
 			"Package" : "DatabaseConnector",
-			"Version" : "5.0.4",
+			"Version" : "5.1.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -591,7 +591,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortMethod",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "66d04d23be7eceeec4e3b56ea2bb64a0e0dcf8b2"
+			"RemoteRef" : "576aa537608f3d125f113307e345b7c475f79a43"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",
@@ -605,13 +605,13 @@
 		},
 		"CohortGenerator" : {
 			"Package" : "CohortGenerator",
-			"Version" : "0.6.0",
+			"Version" : "0.7.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortGenerator",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v0.6.0"
+			"RemoteRef" : "v0.7.0"
 		}
 	}
 }

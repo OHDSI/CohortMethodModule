@@ -1,3 +1,9 @@
+CohortMethodModule 0.0.5
+========================
+
+- Updating CohortMethod and other references for renv.lock file.
+
+
 CohortMethodModule 0.0.4
 ========================
 

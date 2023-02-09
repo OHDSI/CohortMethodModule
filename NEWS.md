@@ -1,3 +1,9 @@
+CohortMethodModule 0.0.6
+========================
+
+- Updating CohortMethod and other references for renv.lock file. This will fix the type of cm_target_comparator_outcome.outcome_of_interest (should be integer).
+
+
 CohortMethodModule 0.0.5
 ========================
 

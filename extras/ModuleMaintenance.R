@@ -37,7 +37,9 @@ rCode <- ParallelLogger::createArgFunction(functionName = 'runCmAnalyses',
                                                            "outputFolder",
                                                            "multiThreadingSettings"),
                                            newName = "createCohortMethodModuleSpecifications",
+                                           addArgs = list(cmDiagnosticThresholds = "createCmDiagnosticThresholds()"),
                                            rCode = rCode)
+rCode <- gsub("\"", "", rCode)
 rCode <- rCode[-grep("^#'", rCode)]
 rCode <- rCode[-grep("class\\(analysis\\)", rCode)]
 rCode[grep("return\\(analysis\\)", rCode)]  <- sprintf("

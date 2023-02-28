@@ -1,3 +1,9 @@
+CohortMethodModule 0.1.0
+========================
+
+- Updating CohortMethod reference. This exposes the diagnostics thresholds.
+
+
 CohortMethodModule 0.0.6
 ========================
 

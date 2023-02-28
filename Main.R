@@ -39,6 +39,7 @@ execute <- function(jobContext) {
   args$outcomeTable <- jobContext$moduleExecutionSettings$cohortTableNames$cohortTable
   args$outputFolder <- jobContext$moduleExecutionSettings$workSubFolder
   args$multiThreadingSettings <- multiThreadingSettings
+  args$cmDiagnosticThresholds  <- NULL
   do.call(CohortMethod::runCmAnalyses, args)
   
   exportFolder <- jobContext$moduleExecutionSettings$resultsSubFolder
@@ -46,7 +47,8 @@ execute <- function(jobContext) {
                             exportFolder = exportFolder,
                             databaseId = jobContext$moduleExecutionSettings$databaseId,
                             minCellCount = jobContext$moduleExecutionSettings$minCellCount,
-                            maxCores = parallel::detectCores())
+                            maxCores = parallel::detectCores(),
+                            cmDiagnosticThresholds = jobContext$settings$cmDiagnosticThresholds)
   unlink(file.path(exportFolder, sprintf("Results_%s.zip", jobContext$moduleExecutionSettings$databaseId)))
 
   moduleInfo <- ParallelLogger::loadSettingsFromJson("MetaData.json")

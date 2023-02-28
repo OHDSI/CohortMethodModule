@@ -5,14 +5,15 @@ createCohortMethodModuleSpecifications <- function(cmAnalysisList,
                                                    targetComparatorOutcomesList,
                                                    analysesToExclude = NULL,
                                                    refitPsForEveryOutcome = FALSE,
-                                                   refitPsForEveryStudyPopulation = TRUE) {
+                                                   refitPsForEveryStudyPopulation = TRUE,
+                                                   cmDiagnosticThresholds = createCmDiagnosticThresholds()) {
   analysis <- list()
   for (name in names(formals(createCohortMethodModuleSpecifications))) {
     analysis[[name]] <- get(name)
   }
 
   specifications <- list(module = "CohortMethodModule",
-                         version = "0.0.6",
+                         version = "0.1.0",
                          remoteRepo = "github.com",
                          remoteUsername = "ohdsi",
                          settings = analysis)

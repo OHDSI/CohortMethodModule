@@ -71,7 +71,6 @@ cmAnalysis <- createCmAnalysis(
   description = "No matching, simple outcome model",
   getDbCohortMethodDataArgs = getDbCmDataArgs,
   createStudyPopArgs = createStudyPopArgs,
-  fitOutcomeModel = TRUE,
   fitOutcomeModelArgs = fitOutcomeModelArgs
 )
 

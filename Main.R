@@ -66,13 +66,10 @@ createDataModelSchema <- function(jobContext) {
   checkmate::assert_class(jobContext$moduleExecutionSettings$resultsConnectionDetails, "ConnectionDetails")
   checkmate::assert_string(jobContext$moduleExecutionSettings$resultsDatabaseSchema)
   connectionDetails <- jobContext$moduleExecutionSettings$resultsConnectionDetails
-  moduleInfo <- getModuleInfo()
-  tablePrefix <- moduleInfo$TablePrefix
   resultsDatabaseSchema <- jobContext$moduleExecutionSettings$resultsDatabaseSchema
   resultsDataModel <- ResultModelManager::loadResultsDataModelSpecifications(
     filePath = system.file("csv", "resultsDataModelSpecification.csv", package = "CohortMethod")
   )
-  resultsDataModel$tableName <- paste0(tablePrefix, resultsDataModel$tableName)
   sql <- ResultModelManager::generateSqlSchema(
     schemaDefinition = resultsDataModel
   )

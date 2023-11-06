@@ -1,3 +1,8 @@
+CohortMethodModule 0.2.1
+========================
+
+- Upgrading CohortMethod to unreleased version (with faster covariate balance computation).
+
 CohortMethodModule 0.2.0
 ========================
 

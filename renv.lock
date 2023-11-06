@@ -115,7 +115,7 @@
       "RemoteHost": "api.github.com",
       "RemoteRepo": "CohortMethod",
       "RemoteUsername": "ohdsi",
-      "RemoteRef": "v5.1.0"
+      "RemoteRef": "cf8ade5af7e65816d00607cbb90df22ecda5f234"
     },
     "CompQuadForm": {
       "Package": "CompQuadForm",
@@ -664,7 +664,7 @@
     },
     "dplyr": {
       "Package": "dplyr",
-      "Version": "1.1.1",
+      "Version": "1.1.3",
       "Source": "Repository",
       "Repository": "CRAN"
     },

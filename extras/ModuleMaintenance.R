@@ -81,7 +81,13 @@ updatedPackages <- list(
     Source = "Repository",
     Repository = "CRAN"
   ),
-  "OHDSI/CirceR@v1.3.2",
+  list(
+    Package = "Matrix",
+    Version = "1.6-0",
+    Source = "Repository",
+    Repository = "CRAN"
+  ),
+  "OHDSI/CohortMethod@v5.2.0",
   "OHDSI/CohortGenerator@v0.8.1",
   "OHDSI/ResultModelManager@v0.5.6"
 )

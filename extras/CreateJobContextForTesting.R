@@ -68,27 +68,27 @@ createStudyPopArgs <- createCreateStudyPopulationArgs(
 
 fitOutcomeModelArgs <- createFitOutcomeModelArgs(modelType = "cox")
 
-createPsArgs = CohortMethod::createCreatePsArgs(
+createPsArgs <- CohortMethod::createCreatePsArgs(
   maxCohortSizeForFitting = 250000,
   errorOnHighCorrelation = FALSE,
-  stopOnError = FALSE, 
+  stopOnError = FALSE,
   estimator = "att",
   prior = createPrior(
-    priorType = "laplace", 
-    exclude = c(0), 
+    priorType = "laplace",
+    exclude = c(0),
     useCrossValidation = TRUE
   ),
   control = createControl(
-    noiseLevel = "silent", 
-    cvType = "auto", 
-    seed = 1, 
-    resetCoefficients = TRUE, 
-    tolerance = 2e-07, 
-    cvRepetitions = 1, 
+    noiseLevel = "silent",
+    cvType = "auto",
+    seed = 1,
+    resetCoefficients = TRUE,
+    tolerance = 2e-07,
+    cvRepetitions = 1,
     startingVariance = 0.01
   )
 )
-matchOnPsArgs = CohortMethod::createMatchOnPsArgs(
+matchOnPsArgs <- CohortMethod::createMatchOnPsArgs(
   maxRatio = 1,
   caliper = 0.2,
   caliperScale = "standardized logit",
@@ -96,11 +96,11 @@ matchOnPsArgs = CohortMethod::createMatchOnPsArgs(
   stratificationColumns = c()
 )
 
-computeSharedCovariateBalanceArgs = CohortMethod::createComputeCovariateBalanceArgs(
+computeSharedCovariateBalanceArgs <- CohortMethod::createComputeCovariateBalanceArgs(
   maxCohortSize = 250000,
   covariateFilter = NULL
 )
-computeCovariateBalanceArgs = CohortMethod::createComputeCovariateBalanceArgs(
+computeCovariateBalanceArgs <- CohortMethod::createComputeCovariateBalanceArgs(
   maxCohortSize = 250000,
   covariateFilter = FeatureExtraction::getDefaultTable1Specifications()
 )
@@ -112,7 +112,7 @@ cmAnalysis <- createCmAnalysis(
   createPsArgs = createPsArgs,
   matchOnPsArgs = matchOnPsArgs,
   computeSharedCovariateBalanceArgs = computeSharedCovariateBalanceArgs,
-  computeCovariateBalanceArgs = computeCovariateBalanceArgs,  
+  computeCovariateBalanceArgs = computeCovariateBalanceArgs,
   fitOutcomeModelArgs = fitOutcomeModelArgs
 )
 

@@ -18,12 +18,14 @@ getSampleCohortDefintionSet <- function() {
     cohortJsonFileName <- cohortJsonFiles[i]
     cohortName <- tools::file_path_sans_ext(basename(cohortJsonFileName))
     cohortJson <- readChar(cohortJsonFileName, file.info(cohortJsonFileName)$size)
-    sampleCohorts <- rbind(sampleCohorts, data.frame(cohortId = i,
-                                                     cohortName = cohortName,
-                                                     cohortDefinition = cohortJson,
-                                                     stringsAsFactors = FALSE))
+    sampleCohorts <- rbind(sampleCohorts, data.frame(
+      cohortId = i,
+      cohortName = cohortName,
+      cohortDefinition = cohortJson,
+      stringsAsFactors = FALSE
+    ))
   }
-  sampleCohorts <- apply(sampleCohorts,1,as.list)
+  sampleCohorts <- apply(sampleCohorts, 1, as.list)
   return(sampleCohorts)
 }
 
@@ -66,11 +68,51 @@ createStudyPopArgs <- createCreateStudyPopulationArgs(
 
 fitOutcomeModelArgs <- createFitOutcomeModelArgs(modelType = "cox")
 
+createPsArgs <- CohortMethod::createCreatePsArgs(
+  maxCohortSizeForFitting = 250000,
+  errorOnHighCorrelation = FALSE,
+  stopOnError = FALSE,
+  estimator = "att",
+  prior = createPrior(
+    priorType = "laplace",
+    exclude = c(0),
+    useCrossValidation = TRUE
+  ),
+  control = createControl(
+    noiseLevel = "silent",
+    cvType = "auto",
+    seed = 1,
+    resetCoefficients = TRUE,
+    tolerance = 2e-07,
+    cvRepetitions = 1,
+    startingVariance = 0.01
+  )
+)
+matchOnPsArgs <- CohortMethod::createMatchOnPsArgs(
+  maxRatio = 1,
+  caliper = 0.2,
+  caliperScale = "standardized logit",
+  allowReverseMatch = FALSE,
+  stratificationColumns = c()
+)
+
+computeSharedCovariateBalanceArgs <- CohortMethod::createComputeCovariateBalanceArgs(
+  maxCohortSize = 250000,
+  covariateFilter = NULL
+)
+computeCovariateBalanceArgs <- CohortMethod::createComputeCovariateBalanceArgs(
+  maxCohortSize = 250000,
+  covariateFilter = FeatureExtraction::getDefaultTable1Specifications()
+)
 cmAnalysis <- createCmAnalysis(
   analysisId = 1,
-  description = "No matching, simple outcome model",
+  description = "Matching, simple outcome model",
   getDbCohortMethodDataArgs = getDbCmDataArgs,
   createStudyPopArgs = createStudyPopArgs,
+  createPsArgs = createPsArgs,
+  matchOnPsArgs = matchOnPsArgs,
+  computeSharedCovariateBalanceArgs = computeSharedCovariateBalanceArgs,
+  computeCovariateBalanceArgs = computeCovariateBalanceArgs,
   fitOutcomeModelArgs = fitOutcomeModelArgs
 )
 
@@ -90,13 +132,15 @@ analysisSpecifications <- createEmptyAnalysisSpecificiations() %>%
   addSharedResources(createCohortSharedResource(getSampleCohortDefintionSet())) %>%
   addModuleSpecifications(cohortMethodModuleSpecifications)
 
-executionSettings <- Strategus::createCdmExecutionSettings(connectionDetailsReference = "dummy",
-                                                           workDatabaseSchema = "main",
-                                                           cdmDatabaseSchema = "main",
-                                                           cohortTableNames = CohortGenerator::getCohortTableNames(cohortTable = "cohort"),
-                                                           workFolder = "dummy",
-                                                           resultsFolder = "dummy",
-                                                           minCellCount = 5)
+executionSettings <- Strategus::createCdmExecutionSettings(
+  connectionDetailsReference = "dummy",
+  workDatabaseSchema = "main",
+  cdmDatabaseSchema = "main",
+  cohortTableNames = CohortGenerator::getCohortTableNames(cohortTable = "cohort"),
+  workFolder = "dummy",
+  resultsFolder = "dummy",
+  minCellCount = 5
+)
 
 # Job Context ----------------------------
 module <- "CohortMethodModule"
@@ -105,8 +149,9 @@ moduleExecutionSettings <- executionSettings
 moduleExecutionSettings$workSubFolder <- "dummy"
 moduleExecutionSettings$resultsSubFolder <- "dummy"
 moduleExecutionSettings$databaseId <- 123
-jobContext <- list(sharedResources = analysisSpecifications$sharedResources,
-                   settings = analysisSpecifications$moduleSpecifications[[moduleIndex]]$settings,
-                   moduleExecutionSettings = moduleExecutionSettings)
+jobContext <- list(
+  sharedResources = analysisSpecifications$sharedResources,
+  settings = analysisSpecifications$moduleSpecifications[[moduleIndex]]$settings,
+  moduleExecutionSettings = moduleExecutionSettings
+)
 saveRDS(jobContext, "tests/testJobContext.rds")
-

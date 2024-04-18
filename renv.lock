@@ -49,14 +49,13 @@
     },
     "CohortMethod": {
       "Package": "CohortMethod",
-      "Version": "5.2.0",
+      "Version": "5.2.1",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "OHDSI",
       "RemoteRepo": "CohortMethod",
-      "RemoteRef": "v5.2.0",
-      "RemoteSha": "d83c54356c5b122544ceb731fb7279fd6cf5e62c"
+      "RemoteRef": "bd904fe71eeeb9b5a24cfb4362b403a5c7a0e637"
     },
     "Cyclops": {
       "Package": "Cyclops",
@@ -280,15 +279,13 @@
     },
     "SqlRender": {
       "Package": "SqlRender",
-      "Version": "1.16.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "checkmate",
-        "rJava",
-        "rlang"
-      ],
-      "Hash": "94d9cae91bbd8aed211bea82aff7cf77"
+      "Version": "1.17.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "OHDSI",
+      "RemoteRepo": "SqlRender",
+      "RemoteRef": "6e13c6631df846301fda69e53638822b246dde29"
     },
     "askpass": {
       "Package": "askpass",

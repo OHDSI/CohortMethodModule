@@ -45,64 +45,18 @@
       "RemoteUsername": "OHDSI",
       "RemoteRepo": "CohortGenerator",
       "RemoteRef": "v0.8.1",
-      "RemoteSha": "78757f1b191a395cf9dcff0d5bbe2b9fa4aa163e",
-      "Remotes": "ohdsi/CirceR, ohdsi/Eunomia, ohdsi/ROhdsiWebApi",
-      "Requirements": [
-        "DatabaseConnector",
-        "ParallelLogger",
-        "R",
-        "R6",
-        "RJSONIO",
-        "SqlRender",
-        "bit64",
-        "checkmate",
-        "digest",
-        "dplyr",
-        "jsonlite",
-        "lubridate",
-        "readr",
-        "rlang",
-        "stringi"
-      ],
-      "Hash": "0b45378a785e6a9e4d2293b9297b280a"
+      "RemoteSha": "78757f1b191a395cf9dcff0d5bbe2b9fa4aa163e"
     },
     "CohortMethod": {
       "Package": "CohortMethod",
       "Version": "5.2.1",
       "Source": "GitHub",
-      "Remotes": "ohdsi/FeatureExtraction, ohdsi/Eunomia, ohdsi/ResultModelManager, ohdsi/ShinyAppBuilder, ohdsi/SqlRender@develop",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "CohortMethod",
       "RemoteUsername": "OHDSI",
-      "RemoteRef": "develop",
-      "RemoteSha": "df1d738a55198dbf4a728fde0c9bbf1840fac543",
-      "Requirements": [
-        "Andromeda",
-        "Cyclops",
-        "DatabaseConnector",
-        "EmpiricalCalibration",
-        "FeatureExtraction",
-        "ParallelLogger",
-        "R",
-        "Rcpp",
-        "SqlRender",
-        "bit64",
-        "checkmate",
-        "cli",
-        "dplyr",
-        "ggplot2",
-        "grid",
-        "gridExtra",
-        "methods",
-        "pillar",
-        "plyr",
-        "readr",
-        "rlang",
-        "survival",
-        "zip"
-      ],
-      "Hash": "3b42203659cbe9601900807f96c510ab"
+      "RemoteRepo": "CohortMethod",
+      "RemoteRef": "df1d738a55198dbf4a728fde0c9bbf1840fac543",
+      "RemoteSha": "df1d738a55198dbf4a728fde0c9bbf1840fac543"
     },
     "Cyclops": {
       "Package": "Cyclops",
@@ -223,18 +177,7 @@
       "Package": "Matrix",
       "Version": "1.6-0",
       "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "grDevices",
-        "graphics",
-        "grid",
-        "lattice",
-        "methods",
-        "stats",
-        "utils"
-      ],
-      "Hash": "31262fd18481fab05c5e7258dac163ca"
+      "Repository": "CRAN"
     },
     "ParallelLogger": {
       "Package": "ParallelLogger",
@@ -333,25 +276,7 @@
       "RemoteUsername": "OHDSI",
       "RemoteRepo": "ResultModelManager",
       "RemoteRef": "v0.5.6",
-      "RemoteSha": "3033804e5af77b8b8dacda67c4d6853731e3641b",
-      "Requirements": [
-        "DBI",
-        "DatabaseConnector",
-        "ParallelLogger",
-        "R",
-        "R6",
-        "SqlRender",
-        "checkmate",
-        "dbplyr",
-        "dplyr",
-        "fastmap",
-        "lubridate",
-        "pool",
-        "readr",
-        "rlang",
-        "zip"
-      ],
-      "Hash": "c0270c064c0118473a5879dd65f98c76"
+      "RemoteSha": "3033804e5af77b8b8dacda67c4d6853731e3641b"
     },
     "SqlRender": {
       "Package": "SqlRender",
@@ -374,11 +299,7 @@
       "Package": "askpass",
       "Version": "1.2.0",
       "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "sys"
-      ],
-      "Hash": "cad6cf7f1d5f6e906700b9d3e718c796"
+      "Repository": "CRAN"
     },
     "assertthat": {
       "Package": "assertthat",

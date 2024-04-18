@@ -129,34 +129,14 @@
     },
     "FeatureExtraction": {
       "Package": "FeatureExtraction",
-      "Version": "3.2.0",
+      "Version": "3.3.1",
       "Source": "GitHub",
       "RemoteType": "github",
-      "Remotes": "ohdsi/Eunomia",
       "RemoteHost": "api.github.com",
+      "RemoteUsername": "OHDSI",
       "RemoteRepo": "FeatureExtraction",
-      "RemoteUsername": "ohdsi",
       "RemoteRef": "v3.3.1",
-      "RemoteSha": "5363f5f4cdaf8b31ce9f193861169047b11ea41c",
-      "Remotes": "ohdsi/Eunomia",
-      "Requirements": [
-        "Andromeda",
-        "DBI",
-        "DatabaseConnector",
-        "ParallelLogger",
-        "R",
-        "RSQLite",
-        "SqlRender",
-        "cli",
-        "dplyr",
-        "jsonlite",
-        "methods",
-        "pillar",
-        "rJava",
-        "readr",
-        "rlang"
-      ],
-      "Hash": "44cdeec32d080af97aafcfee93ea1ce2"
+      "RemoteSha": "1face4df746173667e961d681050021959389694"
     },
     "MASS": {
       "Package": "MASS",

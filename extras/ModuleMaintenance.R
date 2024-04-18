@@ -89,7 +89,8 @@ updatedPackages <- list(
   ),
   "OHDSI/CohortMethod@df1d738a55198dbf4a728fde0c9bbf1840fac543",
   "OHDSI/CohortGenerator@v0.8.1",
-  "OHDSI/ResultModelManager@v0.5.6"
+  "OHDSI/ResultModelManager@v0.5.6",
+  "OHDSI/FeatureExtraction@v3.3.1"
 )
 updatedDevPackages <- list(
   list(

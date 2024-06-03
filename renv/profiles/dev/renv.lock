@@ -49,34 +49,25 @@
     },
     "CohortMethod": {
       "Package": "CohortMethod",
-      "Version": "5.2.0",
+      "Version": "5.3.0",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "OHDSI",
       "RemoteRepo": "CohortMethod",
-      "RemoteRef": "v5.2.0",
-      "RemoteSha": "d83c54356c5b122544ceb731fb7279fd6cf5e62c"
+      "RemoteRef": "v5.3.0",
+      "RemoteSha": "5b70d20f15b1525ce45d9f69389a99753967b396"
     },
     "Cyclops": {
       "Package": "Cyclops",
-      "Version": "3.3.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "Andromeda",
-        "BH",
-        "Matrix",
-        "R",
-        "Rcpp",
-        "RcppEigen",
-        "bit64",
-        "dplyr",
-        "methods",
-        "rlang",
-        "survival"
-      ],
-      "Hash": "9d9eaee8125cbf90c8c3909b7d54984f"
+      "Version": "3.4.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "OHDSI",
+      "RemoteRepo": "Cyclops",
+      "RemoteRef": "v3.4.1",
+      "RemoteSha": "d674198e8596a05b1a3799db92c8da4b04fed512"
     },
     "DBI": {
       "Package": "DBI",
@@ -129,45 +120,15 @@
     },
     "Eunomia": {
       "Package": "Eunomia",
-      "Version": "1.0.2",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "OHDSI",
-      "RemoteRepo": "Eunomia",
-      "RemoteRef": "v1.0.2",
-      "RemoteSha": "e330860e581bcb33896ef1dbac29549224e0990c"
+      "Version": "2.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN"
     },
     "FeatureExtraction": {
       "Package": "FeatureExtraction",
-      "Version": "3.3.1",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "Remotes": "ohdsi/Eunomia",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "FeatureExtraction",
-      "RemoteUsername": "ohdsi",
-      "RemoteRef": "v3.3.1",
-      "RemoteSha": "5363f5f4cdaf8b31ce9f193861169047b11ea41c",
-      "Remotes": "ohdsi/Eunomia",
-      "Requirements": [
-        "Andromeda",
-        "DBI",
-        "DatabaseConnector",
-        "ParallelLogger",
-        "R",
-        "RSQLite",
-        "SqlRender",
-        "cli",
-        "dplyr",
-        "jsonlite",
-        "methods",
-        "pillar",
-        "rJava",
-        "readr",
-        "rlang"
-      ],
-      "Hash": "e2f0efb7493902673d4df645424c5c13"
+      "Version": "3.5.2",
+      "Source": "Repository",
+      "Repository": "CRAN"
     },
     "MASS": {
       "Package": "MASS",
@@ -280,26 +241,20 @@
     },
     "ResultModelManager": {
       "Package": "ResultModelManager",
-      "Version": "0.5.6",
+      "Version": "0.5.7",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "OHDSI",
       "RemoteRepo": "ResultModelManager",
-      "RemoteRef": "v0.5.6",
-      "RemoteSha": "3033804e5af77b8b8dacda67c4d6853731e3641b"
+      "RemoteRef": "v0.5.7",
+      "RemoteSha": "1cff4f0b1856b4c9fef662d3a6fb88e3c3005760"
     },
     "SqlRender": {
       "Package": "SqlRender",
-      "Version": "1.16.1",
+      "Version": "1.18.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "checkmate",
-        "rJava",
-        "rlang"
-      ],
-      "Hash": "94d9cae91bbd8aed211bea82aff7cf77"
+      "Repository": "CRAN"
     },
     "askpass": {
       "Package": "askpass",

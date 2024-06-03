@@ -1,3 +1,8 @@
+CohortMethodModule 0.3.2
+========================
+
+- Updating CohortMethod to v5.3.0
+
 CohortMethodModule 0.3.1
 ========================
 

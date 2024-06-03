@@ -13,7 +13,7 @@ createCohortMethodModuleSpecifications <- function(cmAnalysisList,
   }
 
   specifications <- list(module = "CohortMethodModule",
-                         version = "0.3.2-1",
+                         version = "0.3.2",
                          remoteRepo = "github.com",
                          remoteUsername = "ohdsi",
                          settings = analysis)

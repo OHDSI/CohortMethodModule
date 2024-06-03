@@ -87,10 +87,21 @@ updatedPackages <- list(
     Source = "Repository",
     Repository = "CRAN"
   ),
-  "OHDSI/CohortMethod@df1d738a55198dbf4a728fde0c9bbf1840fac543",
+  list(
+    Package = "SqlRender",
+    Version = "1.18.0",
+    Source = "Repository",
+    Repository = "CRAN"
+  ),
+  list(
+    Package = "FeatureExtraction",
+    Version = "3.5.2",
+    Source = "Repository",
+    Repository = "CRAN"
+  ),
+  "OHDSI/CohortMethod@v5.3.0",
   "OHDSI/CohortGenerator@v0.8.1",
-  "OHDSI/ResultModelManager@v0.5.6",
-  "OHDSI/FeatureExtraction@v3.3.1"
+  "OHDSI/ResultModelManager@v0.5.7"
 )
 updatedDevPackages <- list(
   list(
@@ -99,7 +110,12 @@ updatedDevPackages <- list(
     Source = "Repository",
     Repository = "CRAN"
   ),
-  "OHDSI/Eunomia@v1.0.2"
+  list(
+    Package = "Eunomia",
+    Version = "2.0.0",
+    Source = "Repository",
+    Repository = "CRAN"
+  )
 )
 
 # Deactivates and cleans the project to remove any/all old references

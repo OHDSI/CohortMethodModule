@@ -60,23 +60,14 @@
     },
     "Cyclops": {
       "Package": "Cyclops",
-      "Version": "3.3.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "Andromeda",
-        "BH",
-        "Matrix",
-        "R",
-        "Rcpp",
-        "RcppEigen",
-        "bit64",
-        "dplyr",
-        "methods",
-        "rlang",
-        "survival"
-      ],
-      "Hash": "9d9eaee8125cbf90c8c3909b7d54984f"
+      "Version": "3.4.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "OHDSI",
+      "RemoteRepo": "Cyclops",
+      "RemoteRef": "v3.4.1",
+      "RemoteSha": "d674198e8596a05b1a3799db92c8da4b04fed512"
     },
     "DBI": {
       "Package": "DBI",
